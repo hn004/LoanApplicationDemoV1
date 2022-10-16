@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="card">
+    <h1 class="text-center">Payment Shedules</h1>
+     <table class="table container,table table-bordered,table table-hover,table-responsive-md">
+        <thead>
+            <tr>
+                <th scope="col">CustScheduleId</th>
+                <th scope="col">paymentDate</th>
+                <th scope="col">Principal(Rs) </th>
+                <th scope="col">Projected Interest(Rs) </th>
+                <th scope="col">Payment Amount(Rs) </th>
+                <th scope="col">Payment Status</th></tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let scheduleEntity of scheduleList">
+             <td>{{scheduleEntity.custScheduleId}}</td>
+             <td>{{scheduleEntity.paymentDate}}</td>
+             <td>{{scheduleEntity.principal}}</td>
+             <td>{{scheduleEntity.projectedIntrest}}</td>
+             <td>{{scheduleEntity.paymentAmount}}</td>
+             <td>{{scheduleEntity.status}}</td>
+            </tr>
+        </tbody>
+     </table>
+    </div>
+    <div >
+        <div class="col-md-12 text-center">
+            <button routerLink="/homepage" class="btn btn-danger">Back</button>
+        </div>
+    </div>
+</body>
+</html>

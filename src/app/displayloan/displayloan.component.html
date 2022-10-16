@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel=”stylesheet” href=”https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css”rel=”nofollow” integrity=”sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm” crossorigin=”anonymous”>   -->
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="card">
+    <div class="mt-5">
+        <h1 class="text-center">Loan Record</h1>
+        <table class="table container,table-responsive,table table-bordered,table table-hover">
+            <thead class="thead">
+                <tr>
+                    <th>CustomerId</th>
+                    <th>Payment Term</th>
+                    <th>Interest Rate</th>
+                    <th>Loan Amount</th>
+                    <th>Loan Start Date</th>
+                    <th>Maturity Date</th>
+                    <th>Payment Frequency</th>
+                    <th>Tenure</th>
+                    <th>Trade Date</th>
+
+                </tr>
+            </thead>
+            <tbody class="tbody">
+                <tr *ngFor="let loaneEntity of custLone">
+                    <td>{{loaneEntity.customerId}}</td>
+                    <td>{{loaneEntity.paymentTerm}}</td>
+                    <td>{{loaneEntity.interestRate}}</td>
+                    <td>{{loaneEntity.loanAmount}}</td>
+                    <td>{{loaneEntity.loanStartDate}}</td>
+                    <td>{{loaneEntity.maturityDate}}</td>
+                    <td>{{loaneEntity.paymentFrequency}}</td>
+                    <td>{{loaneEntity.tenure}}</td>
+                    <td>{{loaneEntity.tradeDate}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div >
+    <div class="col-md-12 text-center">
+        <button routerLink="/homepage" class="btn btn-danger">Back</button>
+    </div>
+</div>
+</body>
+
+</html>
